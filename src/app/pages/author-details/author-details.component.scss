@@ -1,0 +1,12 @@
+@import '../../../assets/scss/var';
+
+.author-details{
+    background-color: $primary-bg-color;
+    border-radius: 16px;
+    border: 1px solid $border-color;
+    .name{
+        color: $primary-color;
+        font-size: $fs-md;
+        font-weight: 700;
+    }
+}

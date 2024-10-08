@@ -1,0 +1,9 @@
+
+.btn-fav{
+    font-size: 28px;
+    padding: 0px;
+    border: none;
+    &.active{
+        color: red;
+    }
+}

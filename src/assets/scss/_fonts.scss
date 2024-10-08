@@ -1,0 +1,9 @@
+/**
+* @name : Lato
+* @wight : Light => 300, Medium => 500,  Bold => 700
+**/
+
+@include font-face('Lato', "../fonts/Lato-Light", 300, normal, ttf);
+@include font-face('Lato', "../fonts/Lato-Regular", 500, normal, ttf);
+@include font-face('Lato ', "../fonts/Lato-Bold", 700, normal, ttf);
+

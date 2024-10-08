@@ -1,0 +1,19 @@
+<section class="page-main-banner pb-4 d-flex align-items-center justify-content-center">
+    <h1 class="page-title mt-4 mb-4">My Wishlist</h1>
+</section>
+<section class="books-list mt-5 mb-5">
+    <div class="container">
+        <div class="row">
+            @for(book of wishlist; track book.key){
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <app-book-card [bookData]="book"></app-book-card>
+            </div>
+            }
+            @empty{
+            <div class="col-12">
+                <div class="empty-msg">No Books Found.</div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

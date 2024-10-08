@@ -1,0 +1,33 @@
+<section class="page-main-banner pb-4 d-flex align-items-center justify-content-center">
+    <h1 class="page-title mt-4 mb-4">Author</h1>
+</section>
+<section class="mt-5">
+    <div class="container">
+        @if(isLoading){
+            <app-loader></app-loader>
+        }
+        @else{
+            <div class="author-details mb-5 text-center p-5">
+                @if(authorDetails){
+                    <img alt="" [src]="authorPhotoBaseURL + '/' + authorPhotoID + '-M.jpg?default=false'"
+                                (error)="setDefaultImage($event)">
+                    <h1 class="name mt-4 mb-4">{{authorDetails!.name}}</h1>
+                    <div class="date mb-2">Born at <b>{{authorDetails!.birth_date}}</b></div>
+                    <div class="work-count mb-2">Has <b>{{authorDetails!.revision}}</b> works</div>
+                    <div class="subjects">
+                        Main subjects: 
+                        @for(subject of authorSubjects; track $index){
+                            <b class="me-2">{{subject}},</b>
+                        }
+                        @empty{
+                            <b>-</b>
+                        }
+                    </div>
+                }
+                @else{
+                    <div class="empty-msg">No data provided for this Author.</div>
+                }
+            </div>
+        }
+    </div>
+</section>

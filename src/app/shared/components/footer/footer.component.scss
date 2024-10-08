@@ -1,0 +1,18 @@
+@import '../../../../assets/scss/var';
+
+footer{
+    border-top: 1px solid $border-color;
+    background-color: $primary-bg-color;
+    padding: 10px 0;
+    .socials-list{
+        .btn{
+            font-size: 20px;
+            margin: 0 10px 15px 10px;
+            padding: 0;
+            &:hover{color: $primary-color;}
+        }
+    }
+    .copy-rights{
+        font-size: $fs-sm;
+    }
+}

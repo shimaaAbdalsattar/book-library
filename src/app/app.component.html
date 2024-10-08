@@ -1,0 +1,37 @@
+<app-header></app-header>
+<div class="page-content">
+  <router-outlet></router-outlet>
+</div>
+<app-footer></app-footer>
+<p-toast />
+<p-toast 
+    position="top-center" 
+    key="confirm"  
+    [baseZIndex]="5000">
+        <ng-template let-message pTemplate="headless" let-closeFn="closeFn">
+            <section class="flex p-3 gap-3 w-full bg-black-alpha-90 shadow-2" style="border-radius: 10px">
+                <i class="pi pi-cloud-upload text-primary-500 text-2xl"></i>
+                <div class="flex flex-column gap-3 w-full">
+                    <p class="m-0 font-semibold text-base text-white">
+                        sdfsdfsdf
+                    </p>
+                    <p class="m-0 text-base text-700">
+                        sdfhjdskfhjkdsf
+                    </p>
+                    <div class="flex flex-column gap-2">
+                        hhhhhhhhhhhhhhhhhhhhhhhhh
+                        <label class="text-right text-xs text-white">
+                            80% uploaded...
+                        </label>
+                    </div>
+                    <div class="flex gap-3 mb-3">
+                        <button 
+                            class="btn"
+                            (click)="closeFn($event)">ok</button>
+                        <button class="btn"
+                            (click)="closeFn($event)">cancel</button>
+                    </div>
+                </div>
+            </section>
+        </ng-template>
+</p-toast>
